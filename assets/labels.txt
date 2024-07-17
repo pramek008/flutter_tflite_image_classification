@@ -1,2 +1,3 @@
-Masked
-Without Mask
+Cat
+Dog
+Rabbit
