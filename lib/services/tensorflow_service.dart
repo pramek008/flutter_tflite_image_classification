@@ -18,7 +18,7 @@ class TfLiteService {
 
   Future loadModel() async {
     await Tflite.loadModel(
-      model: 'assets/face_models.tflite',
+      model: 'assets/pet_models.tflite',
       labels: 'assets/labels.txt',
     );
   }
