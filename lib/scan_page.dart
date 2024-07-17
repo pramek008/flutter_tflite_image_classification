@@ -44,7 +44,7 @@ class _ScanPageState extends State<ScanPage> {
       body: BlocBuilder<ScanBloc, ScanState>(
         bloc: _scanBloc,
         builder: (context, state) {
-          print('state: $state');
+          debugPrint('state: $state');
           if (state is InitialScanState) {
             return buildInitialUI();
           } else if (state is ImagePickedState) {
@@ -72,8 +72,10 @@ class _ScanPageState extends State<ScanPage> {
           ElevatedButton(
             // onPressed: () => _scanBloc.add(TakeImageEvent()),
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => RealTimeScanPage()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const RealTimeScanPage()));
             },
             child: const Text('Take Image'),
           ),
